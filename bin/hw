@@ -3,6 +3,14 @@
 # Simple note-taking script
 # /literate-telegram/bin
 
+# TODO:
+# SHOW-ALL - show all messages
+# SHOW     - show messages in given topic
+# DELETE   - delete all messages in topic
+#
+
+
+
 # Get Date
 date=$(date)
 
@@ -17,8 +25,6 @@ read -p "Please enter your note: " note
 
 # Check if user input any data
 if [[ $note ]]; then 
-
-# Save user input to $filename defined above.
 	echo $date: $note >> "$filename"
 	echo Note \'$note\' saved to $filename
 else
