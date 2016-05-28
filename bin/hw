@@ -15,7 +15,13 @@ filename="${HOME}/hw/${topic}notes"
 # Ask user for input
 read -p "Please enter your note: " note
 
-# Save user input to $filename defined above.
+# Check if user input any data
+if [[ $note ]]; then 
 
-echo $date: $note >> "$filename"
-echo Note \'$note\' saved to $filename
+# Save user input to $filename defined above.
+	echo $date: $note >> "$filename"
+	echo Note \'$note\' saved to $filename
+else
+	echo "Cannot insert blank note, please try again."
+fi
+
