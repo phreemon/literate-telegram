@@ -27,7 +27,10 @@ read -p "Please enter your note: " note
 if [[ $note ]]; then 
 	echo $date: $note >> "$filename"
 	echo Note \'$note\' saved to $filename
+	exit 0
 else
 	echo "Cannot insert blank note, please try again."
+	exit 1
 fi
+
 
