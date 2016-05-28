@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Simple note-taking script
+# /literate-telegram/bin
 
 # Get Date
 date=$(date)
