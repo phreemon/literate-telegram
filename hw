@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Simple note-taking script
+# /literate-telegram/bin
+
+# Get Date
+date=$(date)
+
+# Get Topic
+topic="$1"
+
+# Filename
+filename="${HOME}/hw/${topic}notes"
+
+# Ask user for input
+read -p "Please enter your note: " note
+
+# Check if user input any data
+if [[ $note ]]; then 
+
+# Save user input to $filename defined above.
+	echo $date: $note >> "$filename"
+	echo Note \'$note\' saved to $filename
+else
+	echo "Cannot insert blank note, please try again."
+fi
+
