@@ -1,0 +1,53 @@
+#!/bin/bash 
+#
+# Name: fcount 
+# Date: Sat May 28 20:40:38 CDT 2016
+# Description: Compare file count of two directories.
+# Author: phreemon
+#
+#
+
+#Variables
+dir1="$1"
+dir2="$2"
+count_1=""
+count_2=""
+
+# Check number of args
+if [[ $# -ne 2 ]]; then
+	echo 'Command must contain two directories.'
+	echo 'Ex: fcount first second'
+	exit 1
+fi
+
+# Both arguments should be directories.
+if [[ ! -d $1 ]]; then
+	echo "$1 is not a directory."
+	exit 1
+fi
+
+#
+
+if [[ ! -d $2 ]]; then
+	echo "$2 is not a directory."
+	exit 1 
+fi
+
+# Get number of files in each directory
+count_1=$(ls -A1 "$dir1" | wc -l)
+count_2=$(ls -A1 "$dir2" | wc -l)
+
+# Determine which one has the most files 
+if [[ $count_1 -gt $count_2 ]]; then
+	echo "$dir1 file count: $count_1"
+	echo "$dir2 file count: $count_2"
+	echo "Result: $dir1 has more files"
+elif [[ $count_2 -gt $_count1 ]]; then
+	echo "$dir1 file count: $count_1"
+	echo "$dir2 file count: $count_2"
+	echo "Result: $dir2 has more files"
+else 
+	echo "The number of files is equal."
+fi
+
+exit 0
