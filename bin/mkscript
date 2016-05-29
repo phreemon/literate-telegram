@@ -43,7 +43,7 @@ read -p "Please enter a description: " desc
 
 # Create the file with standard header, make executable
 echo "Creating ${scriptname} in ${bindir}."
-printf "!#/bin/bash \n#\n# Name: ${scriptname} \n# Date: $(date)\n# Description: ${desc}\n# Author: phreemon\n#\n#" > $filename
+printf "#!/bin/bash \n#\n# Name: ${scriptname} \n# Date: $(date)\n# Description: ${desc}\n# Author: phreemon\n#\n#" > $filename
 echo "Making ${scriptname} executable."
 chmod u+x $filename
 
