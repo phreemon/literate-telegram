@@ -1,0 +1,12 @@
+#!/bin/bash 
+#
+# Name: fpic 
+# Date: Sat May 28 21:53:11 CDT 2016
+# Description: Takes input from a picture file from camera, and outputs it into a standard structure.
+# Author: phreemon
+#
+#
+
+#Variables
+
+read x

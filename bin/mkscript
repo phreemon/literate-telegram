@@ -54,6 +54,8 @@ if [[ -e $filename ]]; then
 	echo "Error occured while creating $filename"
 	exit 1
 fi
+
+nano $filename
  
 exit 0
 
