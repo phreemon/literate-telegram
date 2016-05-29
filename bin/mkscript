@@ -1,7 +1,13 @@
 #!/bin/bash
+#
+# Name: mkscript
+# Date: Sat May 28 20:35:34 CDT 2016
+# Description: Used to generate runnable scripts based off a template. 
+# Author: phreemon
+#
+#
 
 # Variables
-
 scriptname="$1"
 desc=" "
 bindir="/home/media/git/cmd-demo/literate-telegram/bin"
@@ -32,6 +38,7 @@ if [[ ! -d $bindir ]]; then
 	mkdir -p $bindir
 fi
 
+# Assign $desc 
 read -p "Please enter a description: " desc
 
 # Create the file with standard header, make executable
