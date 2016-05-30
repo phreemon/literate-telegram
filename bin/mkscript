@@ -55,7 +55,7 @@ if [[ -e $filename ]]; then
 	exit 1
 fi
 
-nano $filename
+vim $filename
  
 exit 0
 
